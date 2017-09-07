@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 Edit User
+  form
+  label First Name :
+  input(type="text" class="form-control" value="#{user.fname}")
+  label Last  Name:
+  input(type="text" class="form-control")
+  label Address:
+  input(type="text" class="form-control")
+  input(type='submit',value='Update User' class="btn btn-success")

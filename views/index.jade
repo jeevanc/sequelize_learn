@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+ h6 Users List
+
+ a(href="#")
+   input(type='submit',value='Add User', class="btn btn-info")
+
+  table.table.table-striped
+    thead
+      tr
+        th Fname
+        th Lname
+        th Address
+        th Edit
+        th Delete
+
+
+    tbody
+    for users in user
+      tr
+        td  #{users.fname}
+        td #{users.lname}
+        td #{users.address}
+        td
+          a(href="/users/edit/#{users.id}")
+            | Edit
+        td
+          a(href="/users/delete/#{users.id}")
+            | Delete
