@@ -72,7 +72,9 @@ var models = require('../models');
 //   console.log(newSkill);
 // })
 
-/* GET home page. */
+
+
+
 router.get('/', function(req, res, next) {
   models.user.findAll().then(function(users) {
     res.render('index', {user: users})
@@ -80,6 +82,52 @@ router.get('/', function(req, res, next) {
 });
 
 
+/***** users edit ******/
+router.get('/users/edit/:id',function (req,res,next) {
+  models.user.findById(`${req.params.id}`).then(function(users) {
+    res.render('edit', {user: users})
+  })
+})
+
+/******users update*****/
+router.post('/users/update/:id',function(req,res,next){
+
+  models.user.update({
+          fname:req.body.fname,
+          lname:req.body.lname,
+          address:req.body.address
+  },{
+    where : {
+      id : req.params.id
+    }
+  })
+  // .then(function(userUpdated){
+  //   console.log('**',userUpdated)
+  // })
+  res.redirect(303,'/')
+
+  // models.user.find({
+  //   where:{
+  //     id:req.params.id
+  //   }
+  // }).then(function (users) {
+  //   if(users){
+  //     users.updateAttributes({
+  //       fname:req.body.fname,
+  //       lname:req.body.lname,
+  //       address:req.body.address
+  //     })
+  //   }
+  //   user.save().then(function(newUser){
+  //      console.log(newUser);
+  //    })
+  // })
+})
+
+
+
+
+/*****users delete*********/
 router.get('/users/delete/:id',function (req,res,next) {
   models.user.destroy({
     where:{
@@ -99,11 +147,5 @@ router.get('/users/delete/:id',function (req,res,next) {
 })
 
 
-
-router.get('/users/edit/:id',function (req,res,next) {
-  models.user.findById("${id}").then(function(users) {
-    res.render('edit', {user: users})
-  })
-})
 
 module.exports = router;

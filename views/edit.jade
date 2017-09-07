@@ -2,11 +2,11 @@ extends layout
 
 block content
   h2 Edit User
-  form
-  label First Name :
-  input(type="text" class="form-control" value="#{user.fname}")
-  label Last  Name:
-  input(type="text" class="form-control")
-  label Address:
-  input(type="text" class="form-control")
-  input(type='submit',value='Update User' class="btn btn-success")
+  form(method='POST' action='/users/update/#{user.id}')
+    label First Name :
+    input(type="text" class="form-control" value="#{user.fname}" name="fname")
+    label Last  Name:
+    input(type="text" class="form-control" value="#{user.lname}" name="lname")
+    label Address:
+    input(type="text" class="form-control" value="#{user.address}" name="address")
+    button.btn.btn-success(type='submit') Update User
