@@ -82,6 +82,20 @@ router.get('/', function(req, res, next) {
 });
 
 
+router.get('/user/create',function(req,res,next){
+  res.render('create');
+});
+
+router.post('/user/save',function(req,res,next){
+  models.user.create({
+    fname:req.body.fname,
+    lname:req.body.lname,
+    address:req.body.address
+  })
+  res.redirect(303,'/')
+});
+
+
 /***** users edit ******/
 router.get('/users/edit/:id',function (req,res,next) {
   models.user.findById(`${req.params.id}`).then(function(users) {

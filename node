@@ -1,0 +1,68 @@
+npm install -g express-generator
+create dir
+ express
+npm install
+npm view <package-name> version
+
+/******************************************************************************/
+
+'http://www.overpass-api.de/api/interpreter?data= [out:json][timeout:25]; (node ["amenity"="hospital"] (28.0777267,83.7987185,28.3412243,84.1474838);way ["amenity"="hospital"] (28.0777267,83.7987185,28.3412243,84.1474838);); out body;>; out skel qt;'
+
+/&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&7/
+
+http://www.overpass-api.de/api/interpreter?data= [out:json][timeout:25];(node["amenity"="bank"](27.662548575810682,85.25751113891602,27.756772707469466,85.38625717163086);
+);
+out body;
+>;
+out skel qt;
+
+/%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5/
+
+
+https://www.youtube.com/channel/UCKvDySsrOVgUgRLhWHeyHJA
+
+/$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4/
+
+
+//sequealize model create
+
+sequealize model:create --name model_name --attribute 'title:string body:text'
+
+/!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/
+
+
+http://www.redotheweb.com/2013/02/20/sequelize-the-javascript-orm-in-practice.html /** sequwalize**/
+
+http://gregtrowbridge.com/getting-started-with-sequelize-and-the-sequelize-cli/
+
+
+/******************************************************************************/
+http://mherman.org/blog/2015/10/22/node-postgres-sequelize/#.WbDUvRdLfQp
+
+
+
+
+/********************************************************************/
+https://stackoverflow.com/questions/33214717/why-post-redirects-to-get-and-put-redirects-to-put
+
+
+
+/*******************************************************************\
+
+http://www.codingdefined.com/2016/01/file-upload-in-nodejs.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

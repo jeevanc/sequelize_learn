@@ -1,0 +1,11 @@
+extends layout
+block content
+  h2 Add User
+  form(method='POST' action='/user/save')
+    label First Name :
+    input(type="text" class="form-control"  name="fname")
+    label Last  Name:
+    input(type="text" class="form-control"  name="lname")
+    label Address:
+    input(type="text" class="form-control"  name="address")
+    button.btn.btn-success(type='submit') Create User
