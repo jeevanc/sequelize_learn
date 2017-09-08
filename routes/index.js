@@ -97,7 +97,7 @@ router.post('/user/save',function(req,res,next){
 
 
 /***** users edit ******/
-router.get('/users/edit/:id',function (req,res,next) {
+router.get('/user/edit/:id',function (req,res,next) {
   models.user.findById(`${req.params.id}`).then(function(users) {
     res.render('edit', {user: users})
   })
@@ -142,7 +142,7 @@ router.post('/users/update/:id',function(req,res,next){
 
 
 /*****users delete*********/
-router.get('/users/delete/:id',function (req,res,next) {
+router.get('/user/delete/:id',function (req,res,next) {
   models.user.destroy({
     where:{
       id: req.params.id
