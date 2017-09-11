@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var multer = require('multer');
 var models = require('../models');
 
 //create data
@@ -86,11 +87,32 @@ router.get('/user/create',function(req,res,next){
   res.render('create');
 });
 
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + '.jpg')
+  }
+});
+
+  var upload = multer({ storage: storage }).single('uploadFile');
+
+
 router.post('/user/save',function(req,res,next){
   models.user.create({
     fname:req.body.fname,
     lname:req.body.lname,
-    address:req.body.address
+    address:req.body.address,
+    profile_img:req.body.profile_img
+  })
+  upload(req, res, function (err) {
+    if (err) {
+      // An error occurred when uploading
+      console.log('err',err)
+    }
+  
+  // Everything went fine
   })
   res.redirect(303,'/')
 });
@@ -142,7 +164,7 @@ router.post('/users/update/:id',function(req,res,next){
 
 
 /*****users delete*********/
-router.get('/user/delete/:id',function (req,res,next) {
+router.get('/usertion/delete/:id',function (req,res,next) {
   models.user.destroy({
     where:{
       id: req.params.id

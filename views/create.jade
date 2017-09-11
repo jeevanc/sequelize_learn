@@ -1,11 +1,13 @@
 extends layout
 block content
   h2 Add User
-  form(method='POST' action='/user/save')
+  form(method='POST' action='/user/save' enctype='multipart/form-data')
     label First Name :
     input(type="text" class="form-control"  name="fname")
     label Last  Name:
     input(type="text" class="form-control"  name="lname")
     label Address:
     input(type="text" class="form-control"  name="address")
+    label Profile Image:
+    input(type="file" class="form-control" name="profile_img")
     button.btn.btn-success(type='submit') Create User

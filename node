@@ -24,6 +24,8 @@ https://www.youtube.com/channel/UCKvDySsrOVgUgRLhWHeyHJA
 /$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4/
 
 
+https://medium.com/@pandeysoni/user-authentication-using-jwt-json-web-token-in-node-js-using-express-framework-543151a38ea1
+
 //sequealize model create
 
 sequealize model:create --name model_name --attribute 'title:string body:text'
@@ -39,7 +41,8 @@ http://gregtrowbridge.com/getting-started-with-sequelize-and-the-sequelize-cli/
 /******************************************************************************/
 http://mherman.org/blog/2015/10/22/node-postgres-sequelize/#.WbDUvRdLfQp
 
-
+/{****************************************************************************}/
+https://auth0.com/blog/building-and-authenticating-nodejs-apps/
 
 
 /********************************************************************/
@@ -52,17 +55,11 @@ https://stackoverflow.com/questions/33214717/why-post-redirects-to-get-and-put-r
 http://www.codingdefined.com/2016/01/file-upload-in-nodejs.html
 
 
+/*********************************/
+https://www.codementor.io/iykyvic/writing-your-nodejs-apps-using-es6-6dh0edw2o
+
+https://webapplog.com/es6/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/**************************************************************\
+https://www.google.com/search?client=ubuntu&hs=5qH&channel=fs&q=coding+on+node+js+in+es+6&oq=coding+on+node+js+in+es+6&gs_l=psy-ab.3..33i160k1.11081268.11087142.0.11087451.25.19.0.0.0.0.614.3618.3-4j1j3.8.0....0...1.1.64.psy-ab..17.8.3613...0j0i22i30k1j33i22i29i30k1.G7eIiGpJlEo
